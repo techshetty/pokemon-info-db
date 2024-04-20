@@ -1,0 +1,365 @@
+*{
+  margin: 0;padding: 0; font-family: 'Dosis',sans-serif; font-weight: bold; letter-spacing: 4px; transition: all 300ms ease-in-out;
+}
+body{
+  background-color: grey;
+}
+#navbar{
+  top:0;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  color: gold;
+  font-size: 25px;
+/*			border: 1px solid red;*/
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 100;
+}
+.comBtn:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+#navlogo{
+/*			border: 1px solid red;*/
+  width: 200px;
+  height: 100px;
+  margin-right: 10px;
+  background-image: url('pokelogo.png');
+  background-size: cover;
+}
+#search{
+  margin-right: 15px;
+  opacity: 0;
+}
+  #mainquery{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.4);
+/*			display: none;*/
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 98;
+  }
+  #namelabel{
+    text-transform: uppercase;
+    color: silver;
+    font-size: 30px;
+  }
+#searchbox{
+  background-color: rgba(0, 0, 0, 0.8);
+  border: none;outline: none;
+  color: gold;
+  font-size: 15px;
+  letter-spacing: 2px;
+  width: 50%;
+  padding: 20px;
+  border-radius: 30px;
+  height: 20px;
+}
+#poke{
+  position: absolute;
+  right: 10px;
+  top: 120px;
+  width: 50px;
+  height: 50px;
+  background-image: url("pokeball.png");
+  cursor: pointer;
+  background-size: cover;
+  animation: spin 5000ms linear infinite alternate;
+  z-index: 99;
+}
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(1800deg);
+  }
+}
+#cardgrid{
+  margin-top: 250px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#cards{
+  display: flex;
+  background-color: #5f5f5f;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 15%;
+  border-radius: 25px;
+  height: 330px;
+/*			border: 1px solid red;*/
+  cursor: pointer;
+}
+#cards:hover{
+  transform: scale(1.3);
+}
+#cards #pimg{
+  width: 80%;
+  height: 60%;
+  border-radius: 30px;
+/*			border:1px solid red;*/
+/*			background-image: url("pika.jpg");*/
+  background-size: cover;
+
+}
+#pname{
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  font-size: 25px;
+}
+.card1{
+  background-color: #fff;
+  background-image: url("pokeimgs/pika.jpg");
+}
+.card2{
+  background-color: #fff;
+  background-image: url("pokeimgs/arcanine.jpg");
+}
+.card3{
+  background-color: #fff;
+  background-image: url("pokeimgs/mew.jpg");
+}
+.card4{
+  background-color: #fff;
+  background-image: url("pokeimgs/kang.jpg");
+}
+/*#pow{
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  border: 1px solid red;
+  z-index: inherit;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+*/		#type{
+width: 30px;
+height: 30px;
+/*		background-color: red;*/
+border-radius: 50px;
+margin-left: 20px;
+}
+#desc{
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+
+.type1{
+background-image: url("powers/elec.png");
+background-size: cover;
+}
+.type2{
+background-image: url("powers/fire.png");
+background-size: cover;
+}
+.type3{
+background-image: url("powers/psy.png");
+background-size: cover;
+}
+.type4{
+background-image: url("powers/ground.png");
+background-size: cover;
+}
+#slider{
+display: flex;
+position: fixed;
+justify-content: space-around;
+align-items: center;
+/*	border: 1px solid red;*/
+z-index: 101;
+top: 120px;
+background-color: rgba(0, 0, 0, 0.8);
+height: 100px;
+width: 30%;
+left: -30%;
+border-right: 6px solid black;
+}
+#slider:hover{
+left: 0;
+border-right: 2px;
+}
+
+#conlogo{
+cursor: pointer;
+width: 50px;
+height: 50px;
+/* background-color: #fff; */
+background-size: cover;
+border-radius: 360px;
+}
+.soc1{
+  background-image: url("powers/reddit.png");
+}
+.soc2{
+  filter: invert();
+  background-image: url("powers/discord.png");
+}.soc3{
+  background-image: url("powers/instagram.png");
+}.soc4{
+  background-image: url("powers/elec.png");
+}
+#gobtn{
+margin-left: 20px;
+text-transform: uppercase;
+background-color: #027e6f;
+color: #fff;
+padding: 10px;
+border-radius: 20px;
+border:none;outline: none;
+}
+#pokedex{
+	margin-top: 100px;
+	width: 50%;
+	display: flex;
+	align-items: center;
+  border-radius: 30px;
+	justify-content: space-between;
+	transform: scale(1.5);
+	height: 220px;
+	/* border: 1px solid red;
+   */
+   background-color: #6e7dab;
+}
+#sqimg{
+  border-radius: 30px;
+	margin-left: 5%;
+  overflow: hidden;
+	width: 23%;
+	height: 90%;
+	/* border: 1px solid red; */
+}
+#spinfo{
+  height: 100%;
+	display: flex;
+	margin-right: 20%;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+#spinfo p{
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+#sqimg img{
+	width: 100%;
+	height: 100%;
+}
+#test12{
+  display: flex; justify-content: center;align-items: center; width: 100%;
+}
+#lab{
+  width: 100px;
+  height: 50px;
+  background-image: url("pokelogo.png");
+  background-size: contain;
+  padding: 20px;
+}
+#mycart{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  height: 100vh;
+}
+ #cartholder{
+  width: 70%;
+  height: 60%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  border-radius: 30px;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow-y: scroll;
+  transform: translate(-50%,-50%);
+}
+
+#cartitem{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: 100px;
+  border: 2px solid white;
+}
+#mycart{
+  z-index: 900;
+  display: none;
+}
+#cartitem #cimg{
+  background-image: url("powers/3.png");
+  width: 100px;
+  height: 100px;
+  /* padding: 10px; */
+  height:100%;
+  background-size: cover;
+}
+#cartitem span{
+  text-transform: uppercase;
+  color: silver;
+  font-size: 25px;
+}
+#cartitem select{
+  padding: 10px;
+  background-color: #027e6f;
+  color: #fff;
+  font-weight: bold;
+}
+.nodi{
+  display: none;
+}
+#cartBtn{
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 40px;
+  background-color: lightseagreen;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+
+}
+#cartBtn:hover{
+  transform: scale(1.3);
+  cursor: pointer;
+}
+#checkout{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 100px;
+  height: auto;
+  background-color: #6e7dab;
+  color: antiquewhite;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
